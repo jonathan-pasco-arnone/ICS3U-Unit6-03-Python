@@ -10,10 +10,9 @@ import random
 def lowest_finder(numbers):
     # This program finds the lowest number in a list of random numbers
 
-    # This is 101 so the number is always bigger than the first for loop check
-    previous_lowest_number = 101
+    previous_lowest_number = numbers[0]
 
-    for loop_counter in range(0, 10):
+    for loop_counter in range(1, 10):
         if previous_lowest_number > numbers[loop_counter]:
             previous_lowest_number = numbers[loop_counter]
     return previous_lowest_number
@@ -23,7 +22,6 @@ def main():
     # This function generates 10 random numbers and displays them
 
     numbers = []
-    sum_of_numbers = 0
 
     print("The following is 10 randomly generated numbers"
           " stored in the same variable.")
